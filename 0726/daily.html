@@ -14,7 +14,7 @@
         <div>{{array[1]}}</div>
         <div>{{array[2]}}</div>
         <div>{{array[3]}}</div> -->
-        <div v-for="(item) in array" :key="item">{{ item }}</div>
+        <div v-for="(item) in another" :key="item.id">{{ item.name }}</div>
     </div>
     
 
@@ -24,6 +24,14 @@
             data() {
                 return {
                     array: ['JavaScript', 'HTML/CSS', 'Vue', 'Bootstrap','123'],
+                    another: [{
+                        id: 0,
+                        name: 'lee',
+                    },{
+                        id: 1,
+                        name: 'ooo',
+                    },
+                ],
                 }
             },
         })

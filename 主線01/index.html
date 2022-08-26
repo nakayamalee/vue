@@ -23,7 +23,8 @@
             <div class="row justify-content-center">
                 <div v-for="item in data" class="card position-relative" style="width: 18rem;">
                     <img :src="item.picture.large" class="card-img-top" alt="...">
-                    <i class="bi bi-suit-heart-fill  position-absolute border rounded-circle px-2 py-1 heart" @click="test" :class="{ 'text-dark': isActive, 'text-danger': !isActive }"></i>
+                    <i class="bi bi-suit-heart-fill text-dark position-absolute border rounded-circle px-2 py-1 heart"></i>
+                    <i class="bi bi-suit-heart-fill text-danger position-absolute border rounded-circle px-2 py-1 heart"></i>
                     <div class="card-body">
                         <h5 class="card-title">{{ item.name.title +'.'+ item.name.first +' '+ item.name.last}}
                             <span v-if="item.gender == 'male'"><i class="bi bi-gender-male text-primary"></i></span>

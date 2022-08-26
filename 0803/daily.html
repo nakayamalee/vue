@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         線上課程價格：
-        <input type="text" v-model="price">
+        <input v-model.number="price" type="number">
         <br>
         線上課程折扣價格為 {{ discountPrice }} 元
     </div>
@@ -29,13 +29,19 @@
                 //     this.discountPrice = Math.ceil(this.price * 0.8);
                 // },
                 //上跟下哪一個寫法比較好?
-                price:{
-                    handler(){
+                price: {
+                    handler() {
                         this.discountPrice = Math.ceil(this.price * 0.8);
-                    }
-                }
+                        console.log('123');
+                    },
+                    immediate: true,
+                    
+                },
                 
-            }
+            },
+            methods: {
+                
+            },
         }).mount('#app');
     </script>
 </body>

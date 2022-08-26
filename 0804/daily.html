@@ -39,14 +39,15 @@
                             LastName: '',
                             FullName: '',
                         }
-                    }
+                    },
+                    people: null,
                 }
             },
             watch: {
                 family:{
                     handler(n,o){
                         console.log(n,o);
-                        this.family.child.FullName = this.family.child.FirstName + this.family.child.LastName;
+                        // this.family.child.FullName = this.family.child.FirstName + this.family.child.LastName;
                     },
                     deep:true,
                 }
