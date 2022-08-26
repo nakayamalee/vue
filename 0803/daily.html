@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         線上課程價格：
-        <input type="number" v-model.number="price">
+        <input type="text" v-model="price">
         <br>
         線上課程折扣價格為 {{ discountPrice }} 元
     </div>
@@ -20,14 +20,19 @@
         const app = Vue.createApp({
             data() {
                 return {
-                    price: 3500,
+                    price: '3500',
                     discountPrice: 2800,
                 }
             },
             watch: {
-                price() {
-                    this.discountPrice = Math.ceil(this.price * 0.8);
-                },
+                // price() {
+                //     this.discountPrice = Math.ceil(this.price * 0.8);
+                // },
+                price:{
+                    handler(){
+                        this.discountPrice = Math.ceil(this.price * 0.8);
+                    }
+                }
                 
             }
         }).mount('#app');

@@ -1,0 +1,7 @@
+8/3
+1.v-model.number  甚麼是修飾符?用途?
+
+8/4
+1.watch觸發時機?
+2.handler(new,old),new跟old分別是?
+
